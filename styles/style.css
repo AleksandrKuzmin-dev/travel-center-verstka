@@ -663,4 +663,85 @@ a {
   .why-travel-center__mission-text {
     font-size: 16px;
   }
+}
+
+.company__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+@media (max-width: 1400px) {
+  .company__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .company__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.company__title {
+  margin-bottom: 8px;
+}
+.company__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+}
+.company__text_bold {
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .company__text {
+    font-size: 16px;
+  }
+}
+.company__block {
+  margin-bottom: 28px;
+}
+@media (max-width: 500px) {
+  .company__block {
+    margin-bottom: 23px;
+  }
+}
+.company__principles-title {
+  margin-bottom: 32px;
+}
+@media (max-width: 500px) {
+  .company__principles-title {
+    margin-bottom: 12px;
+  }
+}
+.company__principles-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 500px) {
+  .company__principles-items {
+    gap: 12px;
+  }
+}
+.company__principles-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.company__principles-item-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+}
+@media (max-width: 1400px) {
+  .company__image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
