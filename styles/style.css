@@ -171,6 +171,10 @@ a {
   font-weight: 400;
 }
 
+.none {
+  display: none !important;
+}
+
 .body {
   position: relative;
 }
@@ -181,7 +185,8 @@ a {
   height: 100%;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
@@ -192,6 +197,7 @@ button, a {
   font-size: 64px;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: normal;
 }
 
 .title-h2 {
@@ -200,6 +206,7 @@ button, a {
   font-weight: 400;
   font-size: 54px;
   text-transform: uppercase;
+  line-height: normal;
   color: #000000;
 }
 .title-h2_colored-medium {
@@ -225,10 +232,30 @@ button, a {
   align-items: center;
   padding: 16px 0;
 }
+@media (max-width: 1361px) {
+  .header__wrapper {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 680px) {
+  .header__logo {
+    max-width: 130px;
+  }
+}
+@media (max-width: 360px) {
+  .header__logo {
+    max-width: 97px;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
   gap: 32px;
+}
+@media (max-width: 1260px) {
+  .header__nav {
+    display: none;
+  }
 }
 .header__nav-item {
   font-family: "Montserrat";
@@ -241,6 +268,11 @@ button, a {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+@media (max-width: 1260px) {
+  .header__contacts {
+    display: none;
+  }
 }
 .header__phone-wrapper {
   display: flex;
@@ -271,6 +303,34 @@ button, a {
   background-color: unset;
   border-radius: 59px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header__burger-button {
+  display: none;
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  border: unset;
+  outline: unset;
+  background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
+  box-shadow: 73px 127px 59px rgba(0, 0, 0, 0.01), 41px 71px 49px rgba(0, 0, 0, 0.05), 18px 32px 37px rgba(0, 0, 0, 0.09), 5px 8px 20px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1260px) {
+  .header__burger-button {
+    display: flex;
+  }
+}
+.header__burger-button-line {
+  width: 17px;
+  height: 2px;
+  min-width: 17px;
+  min-height: 2px;
+  background-color: white;
 }
 
 .first-banner {

@@ -3,6 +3,10 @@
     font-weight: 400;
 }
 
+.none {
+    display: none !important;
+}
+
 .body {
     position: relative;
 }
@@ -12,7 +16,8 @@
     height: 100%;
 }
 
-button, a {
+button,
+a {
     cursor: pointer;
 }
 
@@ -23,6 +28,7 @@ button, a {
     font-size: 64px;
     text-transform: uppercase;
     color: #ffffff;
+    line-height: normal;
 }
 
 .title-h2 {
@@ -31,6 +37,7 @@ button, a {
     font-weight: 400;
     font-size: 54px;
     text-transform: uppercase;
+    line-height: normal;
     color: #000000;
 
     &_colored-medium {
