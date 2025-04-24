@@ -403,6 +403,11 @@
 }
 
 .company {
+    margin-bottom: 170px;
+
+    @media (max-width: 640px) {
+        margin-bottom: 100px;
+    }
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -418,9 +423,6 @@
             flex-direction: column;
             gap: 20px;
         }
-    }
-
-    &__content {
     }
 
     &__title {
@@ -490,7 +492,242 @@
             justify-content: center;
         }
     }
+}
 
-    &__image {
+.services {
+    &__wrapper {
+    }
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        justify-content: space-between;
+        margin-bottom: 35px;
+
+        @media (max-width: 960px) {
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 640px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        min-width: max-content;
+    }
+
+    &__title-description {
+        max-width: 836px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #000000;
+
+        @media (max-width: 640px) {
+            font-size: 16px;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        gap: 32px;
+        min-height: 1098px;
+        grid-template-columns: 0.38fr 0.31fr 0.31fr;
+        grid-template-rows: 0.42fr 0.36fr 0.22fr;
+        grid-auto-flow: dense;
+
+        @media (max-width: 960px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        min-width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 48px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px 20px;
+        position: relative;
+
+        &::after {
+            z-index: 1;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(249, 136, 17, 0) 30%,
+                #f98811 100%
+            );
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity ease 0.3s;
+            /*  pointer-events: none; */
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+        &_visa-type {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+            background-image: url('./../images/services-visa-type.jpg');
+
+            @media (max-width: 960px) {
+                background-image: url('./../images/services-visa-type-mobile.jpg');
+            }
+        }
+
+        &_documents {
+            grid-column: 2 / span 2;
+            grid-row: 1 / span 1;
+            background-image: url('./../images/services-documents.jpg');
+            @media (max-width: 960px) {
+                background-image: url('./../images/services-documents-mobile.jpg');
+            }
+        }
+
+        &_questionary {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+            background-image: url('./../images/services-questionary.jpg');
+            @media (max-width: 960px) {
+                background-image: url('./../images/services-questionary-mobile.jpg');
+            }
+        }
+
+        &_visa-status {
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 1;
+            background-image: url('./../images/services-visa-status.jpg');
+            @media (max-width: 960px) {
+                background-image: url('./../images/services-visa-status-mobile.jpg');
+            }
+        }
+
+        &_interview {
+            grid-column: 1 / span 3;
+            grid-row: 3 / span 1;
+            background-image: url('./../images/services-interview.jpg');
+            @media (max-width: 960px) {
+                background-image: url('./../images/services-interview-mobile.jpg');
+            }
+        }
+
+        @media (max-width: 1280px) {
+            padding: 16px;
+            border-radius: 24px;
+        }
+
+        @media (max-width: 960px) {
+            grid-column: unset;
+            grid-row: unset;
+            aspect-ratio: 1/1;
+            padding: 20px 20px;
+        }
+
+        @media (max-width: 640px) {
+            padding: 16px;
+        }
+    }
+
+    &__card-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__card-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 16px;
+
+        @media (max-width: 1280px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 1080px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 960px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__card-list {
+    }
+
+    &__card-list-item {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #ffffff;
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+            content: '•';
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 1280px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 1080px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 960px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 640px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+
+    &__card_interview &__card-content {
+        max-width: 612px;
     }
 }

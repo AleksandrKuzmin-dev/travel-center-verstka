@@ -665,6 +665,14 @@ a {
   }
 }
 
+.company {
+  margin-bottom: 170px;
+}
+@media (max-width: 640px) {
+  .company {
+    margin-bottom: 100px;
+  }
+}
 .company__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -744,4 +752,240 @@ a {
     display: flex;
     justify-content: center;
   }
+}
+
+.services__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+@media (max-width: 960px) {
+  .services__title-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .services__title-wrapper {
+    margin-bottom: 20px;
+  }
+}
+.services__title {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.services__title-description {
+  max-width: 836px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+}
+@media (max-width: 640px) {
+  .services__title-description {
+    font-size: 16px;
+  }
+}
+.services__cards {
+  display: grid;
+  gap: 32px;
+  min-height: 1098px;
+  grid-template-columns: 0.38fr 0.31fr 0.31fr;
+  grid-template-rows: 0.42fr 0.36fr 0.22fr;
+  grid-auto-flow: dense;
+}
+@media (max-width: 960px) {
+  .services__cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.services__card {
+  width: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 20px;
+  position: relative;
+}
+.services__card::after {
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(249, 136, 17, 0) 30%, #f98811 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity ease 0.3s;
+  /*  pointer-events: none; */
+}
+.services__card:hover::after {
+  opacity: 1;
+}
+.services__card_visa-type {
+  grid-column: 1/span 1;
+  grid-row: 1/span 2;
+  background-image: url("./../images/services-visa-type.jpg");
+}
+@media (max-width: 960px) {
+  .services__card_visa-type {
+    background-image: url("./../images/services-visa-type-mobile.jpg");
+  }
+}
+.services__card_documents {
+  grid-column: 2/span 2;
+  grid-row: 1/span 1;
+  background-image: url("./../images/services-documents.jpg");
+}
+@media (max-width: 960px) {
+  .services__card_documents {
+    background-image: url("./../images/services-documents-mobile.jpg");
+  }
+}
+.services__card_questionary {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  background-image: url("./../images/services-questionary.jpg");
+}
+@media (max-width: 960px) {
+  .services__card_questionary {
+    background-image: url("./../images/services-questionary-mobile.jpg");
+  }
+}
+.services__card_visa-status {
+  grid-column: 3/span 1;
+  grid-row: 2/span 1;
+  background-image: url("./../images/services-visa-status.jpg");
+}
+@media (max-width: 960px) {
+  .services__card_visa-status {
+    background-image: url("./../images/services-visa-status-mobile.jpg");
+  }
+}
+.services__card_interview {
+  grid-column: 1/span 3;
+  grid-row: 3/span 1;
+  background-image: url("./../images/services-interview.jpg");
+}
+@media (max-width: 960px) {
+  .services__card_interview {
+    background-image: url("./../images/services-interview-mobile.jpg");
+  }
+}
+@media (max-width: 1280px) {
+  .services__card {
+    padding: 16px;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 960px) {
+  .services__card {
+    grid-column: unset;
+    grid-row: unset;
+    aspect-ratio: 1/1;
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 640px) {
+  .services__card {
+    padding: 16px;
+  }
+}
+.services__card-content {
+  position: relative;
+  z-index: 2;
+}
+.services__card-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+@media (max-width: 1280px) {
+  .services__card-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1080px) {
+  .services__card-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 960px) {
+  .services__card-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .services__card-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .services__card-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+}
+.services__card-list-item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  position: relative;
+  padding-left: 15px;
+}
+.services__card-list-item::before {
+  content: "•";
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1280px) {
+  .services__card-list-item {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1080px) {
+  .services__card-list-item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 960px) {
+  .services__card-list-item {
+    font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .services__card-list-item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .services__card-list-item {
+    font-size: 14px;
+  }
+}
+.services__card_interview .services__card-content {
+  max-width: 612px;
 }/*# sourceMappingURL=style.css.map */
