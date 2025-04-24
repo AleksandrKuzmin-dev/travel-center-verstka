@@ -34,21 +34,20 @@ a {
     color: #ffffff;
     line-height: normal;
 
-    
     @media (max-width: 1180px) {
         font-size: 48px;
-     }
+    }
 
-     @media (max-width: 860px) {
+    @media (max-width: 860px) {
         font-size: 40px;
-     }
+    }
 
-     @media (max-width: 640px) {
+    @media (max-width: 640px) {
         font-size: 32px;
-     }
+    }
 
-     @media (max-width: 500px) {
-       font-size: 24px;
+    @media (max-width: 500px) {
+        font-size: 24px;
     }
 }
 
@@ -63,10 +62,25 @@ a {
 
     &_colored-medium {
         font-weight: 500;
-        font-size: 54px;
         background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+
+    @media (max-width: 1180px) {
+        font-size: 42px;
+    }
+
+    @media (max-width: 860px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 20px;
     }
 }

@@ -236,11 +236,30 @@ a {
 }
 .title-h2_colored-medium {
   font-weight: 500;
-  font-size: 54px;
   background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (max-width: 1180px) {
+  .title-h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 860px) {
+  .title-h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .title-h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .title-h2 {
+    font-size: 20px;
+  }
 }
 
 .header {
@@ -366,6 +385,11 @@ a {
   border-radius: 0px 0px 48px 48px;
   overflow: hidden;
   margin-bottom: 170px;
+}
+@media (max-width: 640px) {
+  .first-banner {
+    margin-bottom: 100px;
+  }
 }
 .first-banner__wrapper {
   padding-top: 144px;
@@ -527,5 +551,116 @@ a {
     height: auto;
     right: -10px;
     bottom: 12px;
+  }
+}
+
+.why-travel-center {
+  margin-bottom: 170px;
+}
+@media (max-width: 640px) {
+  .why-travel-center {
+    margin-bottom: 100px;
+  }
+}
+.why-travel-center__title-wrapper {
+  margin-bottom: 32px;
+}
+@media (max-width: 500px) {
+  .why-travel-center__title-wrapper {
+    margin-bottom: 12px;
+  }
+}
+.why-travel-center__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media (max-width: 500px) {
+  .why-travel-center__title {
+    margin-bottom: 12px;
+  }
+}
+.why-travel-center__title-line {
+  width: 228px;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+}
+@media (max-width: 860px) {
+  .why-travel-center__title-line {
+    width: 160px;
+  }
+}
+@media (max-width: 500px) {
+  .why-travel-center__title-line {
+    width: 80px;
+  }
+}
+.why-travel-center__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 32px;
+}
+@media (max-width: 1180px) {
+  .why-travel-center__text {
+    font-size: 28px;
+  }
+}
+@media (max-width: 860px) {
+  .why-travel-center__text {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .why-travel-center__text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .why-travel-center__text {
+    font-size: 16px;
+  }
+}
+.why-travel-center__mission {
+  padding: 30px;
+  background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
+  border-radius: 40px;
+}
+.why-travel-center__mission-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.why-travel-center__mission-text_bold {
+  font-weight: 600;
+}
+@media (max-width: 1180px) {
+  .why-travel-center__mission-text {
+    font-size: 28px;
+  }
+}
+@media (max-width: 860px) {
+  .why-travel-center__mission-text {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .why-travel-center__mission-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .why-travel-center__mission-text {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
