@@ -913,6 +913,7 @@ a {
 @media (max-width: 640px) {
   .services__card {
     padding: 16px;
+    border-radius: 48px;
   }
 }
 .services__card-content {
@@ -1134,5 +1135,113 @@ a {
 @media (max-width: 500px) {
   .cta__button {
     font-size: 16px;
+  }
+}
+
+.advantages__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+@media (max-width: 1180px) {
+  .advantages__wrapper {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+.advantages__image-wrapper {
+  border-radius: 48px;
+  overflow: hidden;
+}
+@media (max-width: 1180px) {
+  .advantages__image-wrapper_man {
+    grid-row: 3/span 1;
+  }
+}
+@media (max-width: 1180px) {
+  .advantages__image-wrapper_woman {
+    display: none;
+  }
+}
+.advantages__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.advantages__title {
+  margin-bottom: 48px;
+}
+@media (max-width: 640px) {
+  .advantages__title {
+    margin-bottom: 20px;
+  }
+}
+.advantages__content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.advantages__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.advantages__item-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 8px;
+  max-width: 530px;
+}
+@media (max-width: 1180px) {
+  .advantages__item-title {
+    font-size: 28px;
+    max-width: unset;
+  }
+}
+@media (max-width: 860px) {
+  .advantages__item-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .advantages__item-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .advantages__item-title {
+    font-size: 16px;
+  }
+}
+.advantages__item-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+}
+.advantages__item-text_bold {
+  font-weight: 600;
+}
+@media (max-width: 1180px) {
+  .advantages__item-text_mobile-hide {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .advantages__item-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .advantages__item-text {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
