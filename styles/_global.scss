@@ -23,6 +23,9 @@
 button,
 a {
     cursor: pointer;
+    outline: none;
+    background-color: unset;
+    border: none;
 }
 
 .title-h1 {
