@@ -48,6 +48,99 @@
                     </button>
                 </div>
             </div>
+            <section class="mobile-header">
+                <div class="mobile-header__wrapper">
+                    <div class="mobile-header__top-wrapper">
+                        <a href="tel:+79998887766" class="mobile-header__phone">
+                            <svg
+                                class="mobile-header__phone-icon"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M12.7729 6.80429V6.43816C12.7729 6.38338 12.7729 6.35599 12.7726 6.33282C12.7475 4.58184 11.3342 3.16848 9.58318 3.1434C9.56001 3.14307 9.53262 3.14307 9.47783 3.14307H9.11171M6.56863 5.52991C6.27529 6.20288 6.42375 6.98682 6.94285 7.50592L8.49411 9.05718C9.01322 9.57628 9.79715 9.72475 10.4701 9.4314C11.1431 9.13806 11.927 9.28652 12.4461 9.80562L13.3899 10.7494C13.4356 10.7951 13.4585 10.818 13.477 10.8381C13.932 11.3333 13.932 12.0945 13.477 12.5898C13.4585 12.6099 13.4356 12.6328 13.3899 12.6785L12.8162 13.2521C12.3491 13.7193 11.6756 13.9154 11.0307 13.7721C6.63635 12.7956 3.20446 9.36368 2.22793 4.96933C2.08462 4.3244 2.28073 3.65095 2.74788 3.1838L3.32154 2.61014C3.36726 2.56442 3.39013 2.54155 3.41027 2.52305C3.90549 2.068 4.66669 2.068 5.16191 2.52305C5.18205 2.54155 5.20492 2.56442 5.25064 2.61014L6.19441 3.55391C6.71351 4.07301 6.86198 4.85695 6.56863 5.52991Z"
+                                    stroke="white"
+                                    stroke-width="0.727273"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+                            +7 (999) 888-77-66
+                        </a>
+
+                        <button class="mobile-header__burger-close">
+                            <svg
+                                class="mobile-header__burger-close-icon"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 1L13 13"
+                                    stroke="white"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M13 1L1 13"
+                                    stroke="white"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+
+                            Закрыть
+                        </button>
+                    </div>
+                    <div class="mobile-header__devider"></div>
+                    <div class="mobile-header__content">
+                        <div class="mobile-header__menu">
+                            <a class="mobile-header__logo-wrapper" href="./"
+                                ><img
+                                    class="mobile-header__logo"
+                                    alt="Логотип центра путешествий"
+                                    src="./images/logo.svg"
+                            /></a>
+                            <nav class="mobile-header__nav-items">
+                                <a
+                                    href="./#company"
+                                    class="mobile-header__menu-item"
+                                    >О компании</a
+                                >
+                                <a
+                                    href="./#services"
+                                    class="mobile-header__menu-item"
+                                    >Наши услуги</a
+                                >
+                                <a
+                                    href="./#advantages"
+                                    class="mobile-header__menu-item"
+                                    >Наши преимущества</a
+                                >
+                            </nav>
+                            <button class="mobile-header__cta-button">
+                                Оставить заявку
+                            </button>
+                        </div>
+                        <address>
+                            <p class="mobile-header__address">
+                                Челябинск, ул. Братьев Кашириных, 95.
+                            </p>
+                            <p class="mobile-header__schedule-title">
+                                График работы специалистов:
+                            </p>
+                            <p class="mobile-header__schedule-text">
+                                пн-пт с&nbsp;9:00 до&nbsp;19:00&nbsp;сб
+                                с&nbsp;11:00 до&nbsp;15:00
+                            </p>
+                        </address>
+                    </div>
+                </div>
+            </section>
         </header>
         <main>
             <section class="first-banner">
@@ -118,7 +211,7 @@
                 </div>
             </section>
 
-            <section class="company">
+            <section id="company" class="company">
                 <div class="container">
                     <div class="company__wrapper">
                         <div class="company__content">
@@ -202,7 +295,7 @@
                 </div>
             </section>
 
-            <section class="services">
+            <section class="services" id="services">
                 <div class="container">
                     <div class="services__wrapper">
                         <div class="services__title-wrapper">
@@ -351,7 +444,7 @@
                 </div>
             </section>
 
-            <section class="advantages container">
+            <section class="advantages container" id="advantages">
                 <div class="advantages__wrapper">
                     <div
                         class="advantages__image-wrapper advantages__image-wrapper_man"
@@ -523,29 +616,85 @@
         </main>
 
         <footer class="footer">
-            <img class="footer__figure" alt="Абстракции" src="./images/footer-figure.svg">
-            <div class="container">
-                <div class="footer__wrapper">
-                    <address>
-                        <p class="footer__title">NADOTUR г. Челябинск</p>
-                        <a class="footer__phone" href="tel:+79220199514"
-                            >+7 (922) 019-95-14</a
+            <div class="footer__block">
+                <img
+                    class="footer__figure"
+                    alt="Абстракции"
+                    src="./images/footer-figure.svg"
+                />
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <address>
+                            <p class="footer__title">NADOTUR г. Челябинск</p>
+                            <a class="footer__phone" href="tel:+79220199514"
+                                >+7 (922) 019-95-14</a
+                            >
+                            <p class="footer__address">
+                                Челябинск, ул. Братьев Кашириных, 95.
+                            </p>
+                            <p class="footer__schedule-title">
+                                График работы специалистов:
+                            </p>
+                            <p class="footer__schedule-text">
+                                пн-пт с&nbsp;9:00 до&nbsp;19:00&nbsp;сб
+                                с&nbsp;11:00 до&nbsp;15:00
+                            </p>
+                        </address>
+                        <a class="footer__privacy" href="./#"
+                            >Политика конфиденциальности</a
                         >
-                        <p class="footer__address">
-                            Челябинск, ул. Братьев Кашириных, 95.
-                        </p>
-                        <p class="footer__schedule-title">
-                            График работы специалистов:
-                        </p>
-                        <p class="footer__schedule-text">
-                            пн-пт с&nbsp;9:00 до&nbsp;19:00&nbsp;сб с&nbsp;11:00 до&nbsp;15:00
-                        </p>
-                    </address>
-                    <a class="footer__privacy" href="./#"
-                        >Политика конфиденциальности</a
-                    >
+                    </div>
                 </div>
             </div>
         </footer>
+
+        <section class="modal-consultation fadeOutFromNone none">
+            <div class="modal-consultation__wrapper">
+                <h2 class="modal-consultation__title">
+                    Бесплатная консультация
+                </h2>
+                <form
+                    class="modal-consultation__form"
+                    name="modal-consultation"
+                >
+                    <input
+                        class="modal-consultation__input"
+                        name="fio"
+                        placeholder="Ваше ФИО"
+                    />
+                    <input
+                        class="modal-consultation__input"
+                        name="phone"
+                        placeholder="Номер телефона"
+                    />
+                    <button class="modal-consultation__btn" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+
+                <button class="modal-consultation__close">
+                    <svg
+                        width="38"
+                        height="38"
+                        viewBox="0 0 38 38"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M10 10L28 28"
+                            stroke="#2B364C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M28 10L10 28"
+                            stroke="#2B364C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </section>
     </body>
 </html>

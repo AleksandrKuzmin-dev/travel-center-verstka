@@ -166,6 +166,22 @@ a {
   font-weight: 700;
   font-style: normal;
 }
+@keyframes fadeOutFromNone {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeOutFromNoneGallery {
+  animation: fadeOutFromNone 0.5s ease-in-out;
+}
+
+.fadeOutFromNone {
+  animation: fadeOutFromNone 1s ease-in-out;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -380,6 +396,167 @@ a {
   background-color: white;
 }
 
+.mobile-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0px;
+  min-height: 100vh;
+  transition: width 0.7s ease;
+  z-index: 110;
+  overflow: auto;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.mobile-header__cta-button {
+  padding: 12px 24px;
+  width: 100%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 42px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+.mobile-header address {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mobile-header__wrapper {
+  padding: 20px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-header_show {
+  width: 320px;
+  height: unset;
+  visibility: visible;
+}
+@media (max-width: 480px) {
+  .mobile-header_show {
+    width: 100vw;
+  }
+}
+.mobile-header__burger {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+@media (max-width: 1170px) {
+  .mobile-header__burger {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #404040;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-header__burger {
+    font-size: 10px;
+  }
+}
+.mobile-header__burger-icon {
+  width: 22px;
+  height: 22px;
+}
+@media (max-width: 480px) {
+  .mobile-header__burger-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+.mobile-header__top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 30px;
+}
+.mobile-header__phone {
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.mobile-header__phone-icon {
+  width: 16px;
+  height: 16px;
+}
+.mobile-header__burger-close {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  color: black;
+}
+.mobile-header__burger-close-icon {
+  width: 16px;
+  height: 16px;
+}
+.mobile-header__burger-close-icon path {
+  stroke: black;
+}
+.mobile-header__devider {
+  height: 1px;
+  width: 100%;
+  background: black;
+  margin-bottom: 30px;
+}
+.mobile-header__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.mobile-header__logo-wrapper {
+  margin-bottom: 30px;
+  display: inline-block;
+  max-width: 180px;
+}
+.mobile-header__nav-items {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.mobile-header__menu-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: black;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-transform: uppercase;
+}
+
 .first-banner {
   max-width: 1840px;
   margin: 0 auto;
@@ -387,12 +564,6 @@ a {
   background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
   border-radius: 0px 0px 48px 48px;
   overflow: hidden;
-  margin-bottom: 170px;
-}
-@media (max-width: 640px) {
-  .first-banner {
-    margin-bottom: 100px;
-  }
 }
 .first-banner__wrapper {
   padding-top: 144px;
@@ -558,11 +729,11 @@ a {
 }
 
 .why-travel-center {
-  margin-bottom: 170px;
+  padding-top: 170px;
 }
 @media (max-width: 640px) {
   .why-travel-center {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .why-travel-center__title-wrapper {
@@ -669,11 +840,11 @@ a {
 }
 
 .company {
-  margin-bottom: 170px;
+  padding-top: 170px;
 }
 @media (max-width: 640px) {
   .company {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .company__wrapper {
@@ -758,11 +929,11 @@ a {
 }
 
 .services {
-  margin-bottom: 128px;
+  padding-top: 170px;
 }
 @media (max-width: 640px) {
   .services {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .services__title-wrapper {
@@ -1003,11 +1174,11 @@ a {
 }
 
 .cta {
-  margin-bottom: 170px;
+  padding-top: 128px;
 }
 @media (max-width: 640px) {
   .cta {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .cta__wrapper {
@@ -1139,11 +1310,11 @@ a {
 }
 
 .advantages {
-  margin-bottom: 170px;
+  padding-top: 170px;
 }
 @media (max-width: 640px) {
   .advantages {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .advantages__wrapper {
@@ -1256,11 +1427,11 @@ a {
 
 .consultation {
   position: relative;
-  margin-bottom: 170px;
+  padding-top: 170px;
 }
 @media (max-width: 640px) {
   .consultation {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 .consultation__background-image {
@@ -1557,11 +1728,19 @@ a {
 }
 
 .footer {
+  padding-top: 170px;
+}
+.footer__block {
   background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
   border-radius: 20px 20px 0 0;
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 640px) {
+  .footer {
+    padding-top: 100px;
+  }
 }
 .footer__figure {
   position: absolute;
@@ -1595,7 +1774,8 @@ a {
 .footer__wrapper {
   padding: 65px 0;
 }
-.footer__wrapper, .footer__wrapper a {
+.footer__wrapper,
+.footer a {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -1604,12 +1784,14 @@ a {
   color: #ffffff;
 }
 @media (max-width: 960px) {
-  .footer__wrapper, .footer__wrapper a {
+  .footer__wrapper,
+  .footer a {
     font-size: 18px;
   }
 }
 @media (max-width: 640px) {
-  .footer__wrapper, .footer__wrapper a {
+  .footer__wrapper,
+  .footer a {
     font-size: 16px;
   }
 }
@@ -1621,4 +1803,85 @@ a {
 }
 .footer__title {
   margin-bottom: 15px;
+}
+.footer__phone, .footer__privacy {
+  font-weight: 500 !important;
+}
+
+.modal-consultation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.modal-consultation__wrapper {
+  padding: 30px 30px 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  max-width: 570px;
+  width: 100%;
+}
+@media (max-width: 680px) {
+  .modal-consultation__wrapper {
+    padding-top: 60px;
+  }
+}
+.modal-consultation__title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: black;
+}
+.modal-consultation__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+.modal-consultation__input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2b364c;
+  width: 100%;
+}
+.modal-consultation__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2b364c;
+}
+.modal-consultation__input::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+  color: #2b364c;
+}
+.modal-consultation__btn {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 100px;
+  padding: 15px 30px;
+  max-width: 350px;
+  margin-top: 15px;
+  background: linear-gradient(268.35deg, #d01324 0%, #f98a10 100%);
+  box-shadow: 49px 100px 45px rgba(0, 0, 0, 0.01), 27px 56px 38px rgba(0, 0, 0, 0.05), 12px 25px 28px rgba(0, 0, 0, 0.09), 3px 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 42px;
+}
+.modal-consultation__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }/*# sourceMappingURL=style.css.map */

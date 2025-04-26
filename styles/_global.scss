@@ -1,3 +1,20 @@
+@keyframes fadeOutFromNone {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeOutFromNoneGallery {
+    animation: fadeOutFromNone 0.5s ease-in-out;
+}
+
+.fadeOutFromNone {
+    animation: fadeOutFromNone 1s ease-in-out;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
